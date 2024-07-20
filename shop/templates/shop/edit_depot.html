@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ویرایش انبار</title>
+</head>
+<body>
+    <h2>ویرایش انبار</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="code">کد انبار:</label>
+        <input type="text" id="code" name="code" value="{{ depot.Code }}" required><br><br>
+
+        <label for="check_inventory">چک کردن موجودی انبار:</label>
+        <input type="checkbox" id="check_inventory" name="check_inventory" {% if depot.CheckInventory %}checked{% endif %}><br><br>
+
+        <label for="default_depot_api">انبار پیش فرض وب سرویس:</label>
+        <input type="checkbox" id="default_depot_api" name="default_depot_api" {% if depot.DefultDepotAPI %}checked{% endif %}><br><br>
+
+        <label for="pre_sell_invoice_check_inventory">چک کردن موجودی انبار در پیش فاکتور:</label>
+        <input type="checkbox" id="pre_sell_invoice_check_inventory" name="pre_sell_invoice_check_inventory" {% if depot.PreSellInvoiceCheckInventory %}checked{% endif %}><br><br>
+
+        <label for="inventory_valuation">روش ارزیابی انبار:</label>
+        <input type="number" id="inventory_valuation" name="inventory_valuation" value="{{ depot.InventoryValuation }}" required><br><br>
+
+        <label for="item_gender">جنس کالا:</label>
+        <input type="number" id="item_gender" name="item_gender" value="{{ depot.ItemGender }}" required><br><br>
+
+        <label for="remarks">شرح انبار:</label>
+        <textarea id="remarks" name="remarks">{{ depot.Remarks }}</textarea><br><br>
+
+        <label for="depot_type">نوع انبار:</label>
+        <input type="text" id="depot_type" name="depot_type" value="{{ depot.DepotType }}" required><br><br>
+
+        <label for="status">وضعیت:</label>
+        <input type="text" id="status" name="status" value="{{ depot.Status }}" required><br><br>
+
+        <label for="title">عنوان:</label>
+        <input type="text" id="title" name="title" value="{{ depot.Title }}" required><br><br>
+
+        <!-- UserGroups and ItemGroups can be added here as needed -->
+
+        <button type="submit">ویرایش انبار</button>
+    </form>
+</body>
+</html>

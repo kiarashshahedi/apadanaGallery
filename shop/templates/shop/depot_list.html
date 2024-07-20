@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>لیست انبارها</title>
+</head>
+<body>
+    <h2>لیست انبارها</h2>
+    <ul>
+        {% for depot in depots %}
+            <li>{{ depot.Title }} - <a href="{% url 'view_depot' depot.Guid %}">مشاهده</a> - <a href="{% url 'edit_depot' depot.Guid %}">ویرایش</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

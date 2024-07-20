@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>لیست پدرهای کالاها</title>
+</head>
+<body>
+    <h2>لیست پدرهای کالاها</h2>
+    <ul>
+        {% for parent in item_parents %}
+            <li>{{ parent.Title }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

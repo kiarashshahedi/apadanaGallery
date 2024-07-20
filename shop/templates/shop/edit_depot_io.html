@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ویرایش ورودی/خروجی انبار</title>
+</head>
+<body>
+    <h2>ویرایش ورودی/خروجی انبار</h2>
+    <form method="post">
+        {% csrf_token %}
+        <!-- Add form fields here with prefilled values based on DepotIo object -->
+        <label for="acc_doc_no">شماره سند:</label>
+        <input type="text" id="acc_doc_no" name="acc_doc_no" value="{{ depot_io.AccDocNo }}" required><br><br>
+
+        <label for="official">رسمی:</label>
+        <input type="text" id="official" name="official" value="{{ depot_io.Official }}" required><br><br>
+
+        <label for="no">شماره:</label>
+        <input type="text" id="no" name="no" value="{{ depot_io.No }}" required><br><br>
+
+        <label for="date">تاریخ:</label>
+        <input type="date" id="date" name="date" value="{{ depot_io.Date }}" required><br><br>
+
+        <!-- Add other fields similarly -->
+
+        <button type="submit">ویرایش ورودی/خروجی انبار</button>
+    </form>
+</body>
+</html>

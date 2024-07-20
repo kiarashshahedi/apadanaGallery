@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ویرایش کاربر</title>
+</head>
+<body>
+    <h2>ویرایش کاربر</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="status">وضعیت:</label>
+        <input type="text" id="status" name="status" required><br><br>
+
+        <button type="submit">ویرایش</button>
+    </form>
+</body>
+</html>

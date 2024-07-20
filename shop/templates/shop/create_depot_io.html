@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ایجاد ورودی/خروجی انبار</title>
+</head>
+<body>
+    <h2>ایجاد ورودی/خروجی انبار</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="acc_doc_no">شماره سند حسابداری:</label>
+        <input type="text" id="acc_doc_no" name="acc_doc_no" required><br><br>
+
+        <label for="official">رسمی:</label>
+        <input type="text" id="official" name="official" required><br><br>
+
+        <label for="no">شماره:</label>
+        <input type="text" id="no" name="no" required><br><br>
+
+        <label for="date">تاریخ:</label>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="depot1_description">توضیحات انبار 1:</label>
+        <input type="text" id="depot1_description" name="depot1_description" required><br><br>
+
+        <label for="depot1_code">کد انبار 1:</label>
+        <input type="text" id="depot1_code" name="depot1_code" required><br><br>
+
+        <!-- Add other fields similarly -->
+
+        <button type="submit">ایجاد</button>
+    </form>
+</body>
+</html>

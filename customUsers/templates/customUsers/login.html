@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ورود</title>
+</head>
+<body>
+    <h2>ورود</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">نام کاربری:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">رمز عبور:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="mac_address">مک آدرس:</label>
+        <input type="text" id="mac_address" name="mac_address" required><br><br>
+        
+        <label for="otp">رمز یک‌بار مصرف:</label>
+        <input type="text" id="otp" name="otp" required><br><br>
+
+        <button type="submit">ورود</button>
+    </form>
+</body>
+</html>

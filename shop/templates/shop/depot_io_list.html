@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>لیست ورودی/خروجی انبار</title>
+</head>
+<body>
+    <h2>لیست ورودی/خروجی انبار</h2>
+    <ul>
+        {% for depot_io in depot_io_list %}
+            <li>{{ depot_io.No }} - <a href="{% url 'view_depot_io' depot_io.Guid %}">مشاهده</a> - <a href="{% url 'edit_depot_io' depot_io.Guid %}">ویرایش</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
